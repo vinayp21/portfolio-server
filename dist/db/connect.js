@@ -13,9 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var dbConnector = {
 	connect: function connect() {
 		_mongoose2.default.Promise = global.Promise;
-		_mongoose2.default.connect(_config2.default.dbName, {
-			uri_decode_auth: true
-		}, function (err, db) {
+		_mongoose2.default.connect(_config2.default.dbName, { useNewUrlParser: true }, function (err, db) {
 			if (err) {
 				throw new Error(err);
 			}

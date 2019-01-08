@@ -6,9 +6,7 @@ const dbConnector = {
 		mongoose.Promise = global.Promise;
 		mongoose.connect(
 			config.dbName,
-			{
-				uri_decode_auth: true
-			},
+			{ useNewUrlParser: true },
 			(err, db) => {
 				if (err) {
 					throw new Error(err);
