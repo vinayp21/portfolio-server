@@ -4,8 +4,8 @@
   "description": "portfolio server",
   "main": "index.js",
   "scripts": {
-    "build": "PORT=8000 NODE_ENV=development nodemon ./dist/app.js",
-    "build:prod": "NODE_ENV=development npx babel ./src -d ./dist -w",
+    "start": "PORT=8000 NODE_ENV=development nodemon ./dist/app.js",
+    "build:prod": "NODE_ENV=production npx babel ./src -d ./dist -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
